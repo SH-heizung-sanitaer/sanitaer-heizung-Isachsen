@@ -1,0 +1,30 @@
+
+function piResponse() {
+		piSetCookie('visitor_id503181', '631931940', 1000);
+			piSetCookie('visitor_id503181-hash', 'bab95d6edb17005b4c5cd8b3b4420ad7b08e55087bd09821939612a900ee3dcc08f6df3b9c3127775380541eb09c020535f2a979', 1000);
+		
+		if (document.location.protocol != "https:" || (document.location.protocol == "https:" && true)) {
+		var analytics_link = document.location.protocol + "//" + "go.heizungsmacher.ch/analytics?";
+		pi.tracker.visitor_id='631931940';
+
+				pi.tracker.visitor_id_sign='bab95d6edb17005b4c5cd8b3b4420ad7b08e55087bd09821939612a900ee3dcc08f6df3b9c3127775380541eb09c020535f2a979';
+		
+				pi.tracker.campaign_id='6612';
+		
+		var variables = 'conly=true';
+		for (property in pi.tracker) {
+					variables += "&" + property + "=" + encodeURIComponent(pi.tracker[property]);
+				}
+		var headID = document.getElementsByTagName("head")[0];
+		piScriptObj[piScriptNum] = document.createElement('script');
+		piScriptObj[piScriptNum].type = 'text/javascript';
+		piScriptObj[piScriptNum].src = analytics_link + variables;
+		headID.appendChild(piScriptObj[piScriptNum]);
+		piScriptObj[piScriptNum].onload = function() { return; }
+	}
+	}
+piResponse();
+
+
+
+
